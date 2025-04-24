@@ -3,27 +3,26 @@
     "name": "navigation-app",
     "slug": "navigation-app",
     "version": "1.0.0",
-    
-    
-      "web": {
-        "favicon": "./assets/favicon.png"
-      },
-      
-        "experiments": {
-          "tsconfigPaths": true
-        },
-      
-      "plugins": [
-        
-        
-        
-      ],
-    
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "newArchEnabled": true,
+    "sdkVersion": "52.0.0",
+    "entryPoint": "./app/index.tsx",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true,
+      "newArchEnabled": true
+    },
+    "plugins": [
+      "expo-router"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    
-     "userInterfaceStyle": "light",
-    
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
