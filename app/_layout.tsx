@@ -1,8 +1,31 @@
 import '../global.css';
-import { Slot } from 'expo-router';
+import { Slot, SplashScreen } from 'expo-router';
+import { useFonts } from 'expo-font';
+import { useEffect } from 'react';
+import { StatusBar } from 'expo-status-bar';
+
+SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
-  return <Slot/>
-}
+  const [fontsLoaded, error] = useFonts({
+    'WorkSans-Black': require('../assets/fonts/WorkSans-Black.ttf'),
+    'WorkSans-Light': require('../assets/fonts/WorkSans-Light.ttf'),
+    'WorkSans-Medium': require('../assets/fonts/WorkSans-Medium.ttf'),
+  });
 
-export default RootLayout
+  useEffect(() => {
+    if (error) throw error;
+    if (fontsLoaded) SplashScreen.hideAsync();
+  }, [fontsLoaded, error]);
+
+  if (!fontsLoaded && !error) return null;
+
+  return (
+    <>
+      <StatusBar style="auto" />
+      <Slot />
+    </>
+  );
+};
+
+export default RootLayout;
