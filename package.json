@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "expo": "^52.0.46",
-    "expo-router": "~4.0.20",
+    "expo-router": "^4.0.20",
     "expo-status-bar": "~2.0.1",
-    "nativewind": "latest",
+    "nativewind": "^4.1.23",
     "react": "18.3.1",
     "react-native": "0.76.9",
     "react-native-reanimated": "3.16.2",
@@ -36,6 +36,6 @@
     "extends": "universe/native",
     "root": true
   },
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "index.js",
   "private": true
 }

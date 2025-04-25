@@ -1,4 +1,4 @@
-import ScreenContent from 'app/index';
+import ScreenContent from 'components/ScreenContent';
 import { StatusBar } from 'expo-status-bar';
 
 import './global.css';
